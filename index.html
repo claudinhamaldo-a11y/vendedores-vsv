@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vendedores que Saben, Venden · Ingenium Network</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#c8a45a;--gold-light:#e8c878;--blue-dark:#0d1b2a;--blue-mid:#1a2d42;--paper:#f5f2ec;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--blue-dark);color:var(--paper);font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden;}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:4rem 2rem;position:relative;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 40%,rgba(200,164,90,.12) 0%,transparent 70%);pointer-events:none;}
+.hero-label{font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;font-weight:500;}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,8vw,6rem);line-height:1.05;font-weight:900;max-width:14ch;margin-bottom:1.5rem;}
+.hero h1 em{font-style:italic;color:var(--gold);}
+.hero p{font-size:1.15rem;color:rgba(245,242,236,.7);max-width:46ch;line-height:1.7;margin-bottom:3rem;}
+.hero-cta{display:inline-flex;align-items:center;gap:.6rem;background:var(--gold);color:var(--blue-dark);padding:1rem 2.2rem;font-weight:600;font-size:.95rem;text-decoration:none;transition:background .2s,transform .2s;}
+.hero-cta:hover{background:var(--gold-light);transform:translateY(-2px);}
+.divider{width:100%;height:1px;background:linear-gradient(90deg,transparent,rgba(200,164,90,.4),transparent);}
+.intro{background:var(--blue-mid);padding:5rem 2rem;text-align:center;}
+.intro h2{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,4vw,2.6rem);font-weight:700;max-width:32ch;margin:0 auto 1.5rem;line-height:1.25;}
+.intro p{color:rgba(245,242,236,.65);max-width:50ch;margin:0 auto;line-height:1.8;font-size:1.05rem;}
+.guias{padding:5rem 2rem;max-width:1100px;margin:0 auto;}
+.section-label{font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:3rem;text-align:center;}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5px;background:rgba(200,164,90,.15);}
+.card{background:var(--blue-dark);padding:2.5rem 2rem;display:flex;flex-direction:column;gap:1rem;transition:background .25s;position:relative;overflow:hidden;}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;opacity:0;transition:opacity .3s;}
+.card:hover{background:var(--blue-mid);}.card:hover::before{opacity:1;}
+.card-basica::before{background:#6db3e8;}.card-intermedia::before{background:var(--gold);}.card-avanzada::before{background:#e85d35;}
+.card-nivel{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;}
+.card-basica .card-nivel{color:#6db3e8;}.card-intermedia .card-nivel{color:var(--gold);}.card-avanzada .card-nivel{color:#e85d35;}
+.card h3{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;line-height:1.2;}
+.card-desc{color:rgba(245,242,236,.6);font-size:.9rem;line-height:1.7;flex-grow:1;}
+.card-features{list-style:none;display:flex;flex-direction:column;gap:.4rem;}
+.card-features li{font-size:.83rem;color:rgba(245,242,236,.75);padding-left:1.2rem;position:relative;line-height:1.5;}
+.card-features li::before{content:'✦';position:absolute;left:0;font-size:.55rem;top:.18em;color:var(--gold);}
+.card-price{display:flex;align-items:baseline;gap:.4rem;}
+.card-price .amount{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;}
+.card-price .currency{font-size:1rem;color:var(--gold);font-weight:500;}
+.btn-comprar{display:block;text-align:center;padding:.85rem 1.5rem;text-decoration:none;font-weight:600;font-size:.88rem;letter-spacing:.05em;text-transform:uppercase;transition:all .2s;border:1px solid;}
+.card-basica .btn-comprar{border-color:#6db3e8;color:#6db3e8;}.card-basica .btn-comprar:hover{background:#6db3e8;color:var(--blue-dark);}
+.card-intermedia .btn-comprar{background:var(--gold);border-color:var(--gold);color:var(--blue-dark);}.card-intermedia .btn-comprar:hover{background:var(--gold-light);}
+.card-avanzada .btn-comprar{border-color:#e85d35;color:#e85d35;}.card-avanzada .btn-comprar:hover{background:#e85d35;color:var(--paper);}
+.pack-section{background:linear-gradient(135deg,#0a1520 0%,var(--blue-mid) 50%,#0a1520 100%);padding:5rem 2rem;}
+.pack-inner{max-width:860px;margin:0 auto;border:1px solid rgba(200,164,90,.3);padding:3.5rem;position:relative;}
+.pack-inner::before{content:'MEJOR VALOR';position:absolute;top:-.7rem;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--blue-dark);font-size:.65rem;font-weight:700;letter-spacing:.2em;padding:.25rem 1rem;}
+.pack-inner h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;line-height:1.1;margin-bottom:1rem;}
+.pack-inner h2 em{color:var(--gold);font-style:italic;}
+.pack-subtitle{color:rgba(245,242,236,.65);max-width:52ch;line-height:1.7;margin-bottom:2rem;}
+.pack-includes{display:grid;grid-template-columns:1fr 1fr;gap:.6rem 2rem;margin-bottom:2.5rem;}
+.pack-includes li{font-size:.88rem;color:rgba(245,242,236,.75);list-style:none;padding-left:1.4rem;position:relative;line-height:1.5;}
+.pack-includes li::before{content:'✦';position:absolute;left:0;font-size:.55rem;top:.2em;color:var(--gold);}
+.pack-bottom{display:flex;align-items:center;gap:2rem;flex-wrap:wrap;}
+.pack-price-block .tachado{font-size:.85rem;color:rgba(245,242,236,.4);text-decoration:line-through;display:block;margin-bottom:.2rem;}
+.pack-price-block .pack-amount{font-family:'Playfair Display',serif;font-size:3rem;font-weight:900;line-height:1;color:var(--gold);}
+.pack-price-block .pack-currency{font-size:1rem;color:var(--gold);margin-right:.2rem;}
+.pack-price-block .ahorro{font-size:.78rem;color:rgba(200,164,90,.8);margin-top:.3rem;}
+.btn-pack{flex:1;min-width:200px;text-align:center;padding:1.1rem 2rem;background:var(--gold);color:var(--blue-dark);text-decoration:none;font-weight:700;font-size:.95rem;letter-spacing:.05em;text-transform:uppercase;transition:all .2s;}
+.btn-pack:hover{background:var(--gold-light);transform:translateY(-2px);}
+.garantia{text-align:center;padding:3.5rem 2rem;background:var(--blue-dark);border-top:1px solid rgba(200,164,90,.1);}
+.garantia-icon{font-size:2.5rem;margin-bottom:1rem;}
+.garantia h3{font-family:'Playfair Display',serif;font-size:1.4rem;margin-bottom:.6rem;}
+.garantia p{color:rgba(245,242,236,.6);font-size:.9rem;max-width:40ch;margin:0 auto;}
+.autor{padding:5rem 2rem;max-width:780px;margin:0 auto;}
+.autor-label{font-size:.65rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;}
+.autor-text h2{font-family:'Playfair Display',serif;font-size:1.8rem;margin-bottom:1rem;font-weight:700;}
+.autor-text p{color:rgba(245,242,236,.65);font-size:.92rem;line-height:1.8;margin-bottom:.8rem;}
+.faq{padding:5rem 2rem;max-width:680px;margin:0 auto;}
+.faq-title{font-family:'Playfair Display',serif;font-size:2rem;text-align:center;margin-bottom:3rem;}
+.faq-item{border-top:1px solid rgba(200,164,90,.15);padding:1.5rem 0;}
+.faq-q{font-weight:600;font-size:.95rem;margin-bottom:.7rem;color:var(--paper);}
+.faq-a{color:rgba(245,242,236,.6);font-size:.88rem;line-height:1.75;}
+footer{background:#060d14;padding:3rem 2rem;text-align:center;border-top:1px solid rgba(200,164,90,.1);}
+footer p{color:rgba(245,242,236,.35);font-size:.78rem;line-height:1.8;}
+footer a{color:rgba(200,164,90,.7);text-decoration:none;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.hero>*{animation:fadeUp .7s ease both;}
+.hero-label{animation-delay:.1s;}.hero h1{animation-delay:.25s;}.hero p{animation-delay:.4s;}.hero-cta{animation-delay:.55s;}
+@media(max-width:640px){.pack-includes{grid-template-columns:1fr;}.pack-inner{padding:2.5rem 1.5rem;}.pack-bottom{flex-direction:column;}}
+</style>
+</head>
+<body>
+<section class="hero" id="inicio">
+  <p class="hero-label">Ingenium Network · Claudia Maldonado</p>
+  <h1>Vendedores que <em>Saben</em>, Venden</h1>
+  <p>Guías prácticas de ventas para quien quiere dejar de improvisar y empezar a cerrar. Desde los fundamentos hasta la estrategia de escala.</p>
+  <a href="#guias" class="hero-cta">Ver las guías ↓</a>
+</section>
+<div class="divider"></div>
+<section class="intro">
+  <h2>¿Qué diferencia a un vendedor que cierra del que solo ofrece?</h2>
+  <p>El conocimiento. La técnica. La práctica sistemática. Estas guías condensan años de experiencia en pasos concretos que podés aplicar hoy mismo.</p>
+</section>
+<div class="divider"></div>
+<section class="guias" id="guias">
+  <p class="section-label">Colección completa · Tres niveles</p>
+  <div class="cards">
+    <div class="card card-basica">
+      <span class="card-nivel">Nivel Básico</span><h3>Guía Básica</h3>
+      <p class="card-desc">Los fundamentos que todo vendedor necesita dominar antes de intentar cualquier técnica avanzada.</p>
+      <ul class="card-features"><li>6 capítulos de fundamentos</li><li>Cómo superar el miedo a vender</li><li>Primeras técnicas de cierre</li><li>Checklist de ventas incluido</li></ul>
+      <div class="card-price"><span class="currency">USD</span><span class="amount">9</span></div>
+      <a href="https://go.hotmart.com/B104792745V" class="btn-comprar" target="_blank">Comprar ahora →</a>
+    </div>
+    <div class="card card-intermedia">
+      <span class="card-nivel">Nivel Intermedio</span><h3>Guía Intermedia</h3>
+      <p class="card-desc">Convertí conversaciones de WhatsApp en ventas reales con scripts probados y técnicas de persuasión.</p>
+      <ul class="card-features"><li>7 capítulos avanzados</li><li>30 scripts de WhatsApp</li><li>Método SPIN adaptado</li><li>Bonus: 5 mensajes que reactivan clientes</li></ul>
+      <div class="card-price"><span class="currency">USD</span><span class="amount">15</span></div>
+      <a href="https://go.hotmart.com/O104792862B" class="btn-comprar" target="_blank">Comprar ahora →</a>
+    </div>
+    <div class="card card-avanzada">
+      <span class="card-nivel">Nivel Avanzado</span><h3>Guía Avanzada</h3>
+      <p class="card-desc">Estrategia, liderazgo y métricas para construir un negocio sólido y escalable.</p>
+      <ul class="card-features"><li>8 capítulos de alto nivel</li><li>Sistema de KPIs comerciales</li><li>Cómo liderar un equipo</li><li>Bonus: Kit del Propietario + Excel KPIs</li></ul>
+      <div class="card-price"><span class="currency">USD</span><span class="amount">25</span></div>
+      <a href="https://go.hotmart.com/S104792928R" class="btn-comprar" target="_blank">Comprar ahora →</a>
+    </div>
+  </div>
+</section>
+<section class="pack-section" id="pack">
+  <div class="pack-inner">
+    <h2>Pack Completo<br><em>Las 3 Guías</em></h2>
+    <p class="pack-subtitle">48 páginas de contenido práctico. El sistema completo de ventas, de principio a fin.</p>
+    <ul class="pack-includes">
+      <li>Guía Básica completa</li><li>30 Scripts de WhatsApp</li>
+      <li>Guía Intermedia completa</li><li>Kit del Propietario Comercial</li>
+      <li>Guía Avanzada completa</li><li>Plantilla Excel de KPIs</li>
+      <li>5 mensajes que reactivan clientes</li><li>Checklist de ventas</li>
+    </ul>
+    <div class="pack-bottom">
+      <div class="pack-price-block">
+        <span class="tachado">USD 49 si comprás por separado</span>
+        <div><span class="pack-currency">USD</span><span class="pack-amount">39</span></div>
+        <p class="ahorro">Ahorrás USD 10 · Acceso inmediato</p>
+      </div>
+      <a href="https://go.hotmart.com/F104794550X" class="btn-pack" target="_blank">Quiero el Pack completo →</a>
+    </div>
+  </div>
+</section>
+<section class="garantia">
+  <div class="garantia-icon">🔒</div>
+  <h3>Garantía de 7 días</h3>
+  <p>Si las guías no te son útiles, te devolvemos el dinero sin preguntas. Cero riesgo.</p>
+</section>
+<div class="divider"></div>
+<section class="autor">
+  <div class="autor-text">
+    <p class="autor-label">Sobre la autora</p>
+    <h2>Claudia Maldonado</h2>
+    <p>Ingeniera Comercial, MBA y Máster en Gestión de Proyectos. Fundadora de Ingenium Network.</p>
+    <p>Estas guías nacen de años trabajando con equipos comerciales reales: lo que funciona, lo que no, y cómo sistematizar resultados en cualquier industria.</p>
+    <p style="color:rgba(200,164,90,.8);font-size:.83rem">claudia@ingenium.network · LinkedIn: claudiafiorela</p>
+  </div>
+</section>
+<div class="divider"></div>
+<section class="faq">
+  <h2 class="faq-title">Preguntas frecuentes</h2>
+  <div class="faq-item"><p class="faq-q">¿Cómo recibo las guías?</p><p class="faq-a">Hotmart te envía el acceso inmediatamente después del pago. Automático, 24/7.</p></div>
+  <div class="faq-item"><p class="faq-q">¿En qué formato están?</p><p class="faq-a">PDF para cualquier dispositivo. La Avanzada y el Pack incluyen también una Plantilla Excel funcional.</p></div>
+  <div class="faq-item"><p class="faq-q">¿Para qué tipo de ventas sirven?</p><p class="faq-a">Cualquier tipo: productos, servicios, WhatsApp, presencial o digital.</p></div>
+  <div class="faq-item"><p class="faq-q">¿Por dónde empiezo?</p><p class="faq-a">Si sos nuevo, la Básica. Si ya vendés, la Intermedia. Si querés el sistema completo, el Pack.</p></div>
+  <div class="faq-item"><p class="faq-q">¿Y si no me satisface?</p><p class="faq-a">7 días de garantía completa a través de Hotmart. Sin complicaciones.</p></div>
+</section>
+<footer>
+  <p><strong style="color:var(--gold);font-family:'Playfair Display',serif;font-size:1rem">Ingenium Network EIRL</strong><br>
+  <a href="mailto:claudia@ingenium.network">claudia@ingenium.network</a> · <a href="https://linkedin.com/in/claudiafiorela" target="_blank">LinkedIn: claudiafiorela</a><br><br>
+  © 2026 Ingenium Network · Todos los derechos reservados</p>
+</footer>
+<script>document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();document.querySelector(a.getAttribute('href'))?.scrollIntoView({behavior:'smooth'});});});</script>
+</body>
+</html>
