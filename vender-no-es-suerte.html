@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vender No es Suerte · Ingenium Network</title>
+<style>
+  :root{--negro:#0A0A0A;--naranja:#E8500A;--naranja-claro:#FF6B2B;--crema:#F5F0E8;--crema-suave:#EDE8DF;--gris:#1A1A1A;--gris-medio:#2A2A2A;--texto-suave:#A0988C}
+  *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+  body{font-family:'Georgia','Times New Roman',serif;background:var(--negro);color:var(--crema);line-height:1.7}
+  nav,.badge,.precio,.btn,.faq-q,.footer-links,.afiliado-datos,.meta-tag{font-family:'Helvetica Neue',Arial,sans-serif}
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 5%;display:flex;justify-content:space-between;align-items:center;background:rgba(10,10,10,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(232,80,10,0.15);letter-spacing:.12em;font-size:.78rem;text-transform:uppercase}
+  .nav-marca{color:var(--crema);opacity:.7}.nav-marca span{color:var(--naranja);opacity:1}
+  .nav-cta{background:var(--naranja);color:white;padding:10px 22px;border-radius:3px;text-decoration:none;font-weight:700;transition:background .2s}
+  .nav-cta:hover{background:var(--naranja-claro)}
+  .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 5% 80px;position:relative;overflow:hidden}
+  .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(232,80,10,.12) 0%,transparent 70%),radial-gradient(ellipse 60% 40% at 80% 100%,rgba(232,80,10,.06) 0%,transparent 60%)}
+  .hero::after{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(232,80,10,.15) 1px,transparent 1px);background-size:40px 40px;opacity:.4}
+  .hero-inner{position:relative;z-index:1;max-width:780px}
+  .hero-eyebrow{font-family:'Helvetica Neue',Arial,sans-serif;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--naranja);margin-bottom:28px}
+  .hero h1{font-size:clamp(3rem,8vw,6.5rem);font-weight:900;line-height:1;color:var(--crema);margin-bottom:12px}
+  .hero h1 em{font-style:italic;color:var(--naranja)}
+  .hero-sub{font-size:clamp(1rem,2vw,1.25rem);color:var(--texto-suave);max-width:560px;margin:24px auto 48px;font-style:italic}
+  .hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+  .btn-primario{background:var(--naranja);color:white;padding:18px 40px;border-radius:3px;text-decoration:none;font-weight:700;font-family:'Helvetica Neue',Arial,sans-serif;font-size:1rem;letter-spacing:.05em;transition:all .2s;display:inline-block}
+  .btn-primario:hover{background:var(--naranja-claro);transform:translateY(-2px)}
+  .btn-secundario{border:1px solid rgba(245,240,232,.3);color:var(--crema);padding:18px 40px;border-radius:3px;text-decoration:none;font-family:'Helvetica Neue',Arial,sans-serif;font-size:1rem;transition:all .2s;display:inline-block}
+  .btn-secundario:hover{border-color:var(--naranja);color:var(--naranja)}
+  .hero-meta{margin-top:48px;display:flex;gap:32px;justify-content:center;flex-wrap:wrap;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.8rem;color:var(--texto-suave);letter-spacing:.05em}
+  .hero-meta span{display:flex;align-items:center;gap:8px}
+  .hero-meta span::before{content:'—';color:var(--naranja)}
+  .separador{height:1px;background:linear-gradient(90deg,transparent,rgba(232,80,10,.4),transparent);margin:0 5%}
+  section{padding:96px 5%}
+  .seccion-label{font-family:'Helvetica Neue',Arial,sans-serif;font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;color:var(--naranja);margin-bottom:20px}
+  h2{font-size:clamp(2rem,4vw,3rem);font-weight:900;line-height:1.1;color:var(--crema);margin-bottom:24px}
+  h2 em{font-style:italic;color:var(--naranja)}
+  .propuesta{background:var(--gris)}
+  .propuesta-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;max-width:1100px;margin:0 auto}
+  .propuesta-texto p{color:var(--texto-suave);margin-bottom:20px;font-size:1.05rem}
+  .propuesta-texto p strong{color:var(--crema)}
+  .propuesta-puntos{list-style:none;margin-top:32px}
+  .propuesta-puntos li{padding:14px 0;border-bottom:1px solid rgba(245,240,232,.08);display:flex;gap:16px;align-items:flex-start;font-size:.95rem;color:var(--crema-suave)}
+  .propuesta-puntos li::before{content:'→';color:var(--naranja);flex-shrink:0;margin-top:2px}
+  .propuesta-visual{background:linear-gradient(135deg,var(--gris-medio) 0%,#111 100%);border:1px solid rgba(232,80,10,.2);border-radius:8px;padding:48px 40px;position:relative;overflow:hidden}
+  .propuesta-visual::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--naranja),var(--naranja-claro))}
+  .partes-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .parte-item{padding:20px;background:rgba(232,80,10,.06);border:1px solid rgba(232,80,10,.12);border-radius:4px}
+  .parte-num{font-family:'Helvetica Neue',Arial,sans-serif;font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--naranja);margin-bottom:8px}
+  .parte-titulo{font-size:.9rem;font-weight:bold;color:var(--crema);margin-bottom:6px}
+  .parte-desc{font-size:.8rem;color:var(--texto-suave)}
+  .capitulos-badge{margin-top:24px;text-align:center;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.8rem;color:var(--texto-suave);padding:12px;border-top:1px solid rgba(245,240,232,.08)}
+  .capitulos-badge strong{color:var(--naranja);font-size:1.4rem}
+  .producto{background:var(--negro)}
+  .producto-inner{max-width:640px;margin:0 auto}
+  .producto-card{background:var(--gris);border:1px solid rgba(232,80,10,.25);border-radius:8px;overflow:hidden;position:relative}
+  .producto-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--naranja),var(--naranja-claro),var(--naranja))}
+  .producto-header{padding:40px 48px 32px;border-bottom:1px solid rgba(245,240,232,.08)}
+  .producto-nombre{font-size:1.5rem;font-weight:900;color:var(--crema);margin-bottom:8px}
+  .producto-sub{font-size:.95rem;color:var(--texto-suave);font-style:italic}
+  .producto-body{padding:32px 48px}
+  .incluye-titulo{font-family:'Helvetica Neue',Arial,sans-serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--naranja);margin-bottom:20px}
+  .incluye-lista{list-style:none;margin-bottom:32px}
+  .incluye-lista li{padding:10px 0;border-bottom:1px solid rgba(245,240,232,.06);font-size:.95rem;color:var(--crema-suave);display:flex;gap:12px;align-items:center}
+  .incluye-lista li::before{content:'✓';color:var(--naranja);font-weight:bold}
+  .producto-precio-bloque{display:flex;align-items:baseline;gap:12px;margin-bottom:24px}
+  .precio-usd{font-family:'Helvetica Neue',Arial,sans-serif;font-size:3rem;font-weight:900;color:var(--crema)}
+  .precio-moneda{font-family:'Helvetica Neue',Arial,sans-serif;font-size:1rem;color:var(--texto-suave)}
+  .btn-comprar{display:block;text-align:center;background:var(--naranja);color:white;padding:20px;border-radius:4px;text-decoration:none;font-weight:700;font-family:'Helvetica Neue',Arial,sans-serif;font-size:1.05rem;letter-spacing:.04em;transition:all .2s}
+  .btn-comprar:hover{background:var(--naranja-claro);transform:translateY(-2px)}
+  .garantia{margin-top:20px;text-align:center;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.8rem;color:var(--texto-suave)}
+  .garantia span{color:var(--crema)}
+  .afiliados{background:var(--gris);position:relative;overflow:hidden}
+  .afiliados::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(232,80,10,.08) 0%,transparent 70%)}
+  .afiliados-inner{max-width:960px;margin:0 auto;position:relative;z-index:1}
+  .afiliados-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;margin-top:48px}
+  .afiliados-texto p{color:var(--texto-suave);margin-bottom:16px;font-size:1rem}
+  .afiliados-texto p strong{color:var(--crema)}
+  .comision-bloque{margin:32px 0;background:rgba(232,80,10,.08);border:1px solid rgba(232,80,10,.2);border-radius:6px;padding:28px 32px}
+  .comision-num{font-family:'Helvetica Neue',Arial,sans-serif;font-size:3.5rem;font-weight:900;color:var(--naranja);line-height:1}
+  .comision-label{font-family:'Helvetica Neue',Arial,sans-serif;font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:var(--texto-suave);margin-top:6px}
+  .comision-detalle{margin-top:16px;padding-top:16px;border-top:1px solid rgba(245,240,232,.1);font-family:'Helvetica Neue',Arial,sans-serif;font-size:.85rem;color:var(--texto-suave)}
+  .comision-detalle strong{color:var(--crema)}
+  .afiliado-pasos{list-style:none}
+  .afiliado-pasos li{display:flex;gap:20px;margin-bottom:24px}
+  .paso-num{width:36px;height:36px;border-radius:50%;background:rgba(232,80,10,.15);border:1px solid rgba(232,80,10,.3);display:flex;align-items:center;justify-content:center;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.8rem;font-weight:700;color:var(--naranja);flex-shrink:0;margin-top:2px}
+  .paso-texto strong{display:block;color:var(--crema);margin-bottom:4px;font-size:.95rem}
+  .paso-texto span{font-size:.88rem;color:var(--texto-suave)}
+  .afiliado-cta{margin-top:32px;padding:36px;background:var(--negro);border:1px solid rgba(232,80,10,.2);border-radius:6px;text-align:center}
+  .afiliado-cta p{color:var(--texto-suave);font-size:.9rem;margin-bottom:20px}
+  .btn-afiliado{display:inline-block;border:2px solid var(--naranja);color:var(--naranja);padding:16px 36px;border-radius:3px;text-decoration:none;font-weight:700;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.95rem;letter-spacing:.05em;transition:all .2s}
+  .btn-afiliado:hover{background:var(--naranja);color:white;transform:translateY(-2px)}
+  .afiliado-nota{margin-top:12px;font-size:.78rem;color:var(--texto-suave);font-family:'Helvetica Neue',Arial,sans-serif}
+  .autora{background:var(--negro)}
+  .autora-inner{max-width:800px;margin:0 auto;display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:start}
+  .autora-avatar{width:120px;height:120px;border-radius:50%;border:2px solid rgba(232,80,10,.3);background:var(--gris);overflow:hidden;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:'Helvetica Neue',Arial,sans-serif;font-size:2.5rem;color:var(--naranja)}
+  .autora-nombre{font-size:1.4rem;font-weight:900;color:var(--crema);margin-bottom:4px}
+  .autora-cargo{font-family:'Helvetica Neue',Arial,sans-serif;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--naranja);margin-bottom:20px}
+  .autora-bio{color:var(--texto-suave);font-size:.97rem;margin-bottom:16px}
+  .autora-bio strong{color:var(--crema)}
+  .autora-contacto{font-family:'Helvetica Neue',Arial,sans-serif;font-size:.8rem;color:var(--texto-suave);margin-top:20px}
+  .autora-contacto a{color:var(--naranja);text-decoration:none}
+  .faq{background:var(--gris)}
+  .faq-inner{max-width:720px;margin:0 auto}
+  .faq-item{border-bottom:1px solid rgba(245,240,232,.08);padding:24px 0;cursor:pointer}
+  .faq-q{font-size:1rem;font-weight:600;color:var(--crema);display:flex;justify-content:space-between;align-items:center;gap:20px}
+  .faq-q span{color:var(--naranja);font-size:1.2rem;transition:transform .2s}
+  .faq-a{font-size:.95rem;color:var(--texto-suave);margin-top:16px;max-height:0;overflow:hidden;transition:max-height .3s ease}
+  .faq-item.abierto .faq-a{max-height:200px}
+  .faq-item.abierto .faq-q span{transform:rotate(45deg)}
+  footer{background:#050505;padding:48px 5%;border-top:1px solid rgba(232,80,10,.12);text-align:center}
+  .footer-marca{font-family:'Helvetica Neue',Arial,sans-serif;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--texto-suave);margin-bottom:12px}
+  .footer-marca span{color:var(--naranja)}
+  .footer-links{font-size:.8rem;color:var(--texto-suave);margin-top:16px}
+  .footer-links a{color:var(--naranja);text-decoration:none}
+  .footer-copy{margin-top:20px;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.75rem;color:rgba(160,152,140,.5)}
+  @media(max-width:768px){.propuesta-grid,.afiliados-grid,.autora-inner{grid-template-columns:1fr;gap:40px}.partes-grid{grid-template-columns:1fr}.producto-header,.producto-body{padding:32px 28px}.hero-btns{flex-direction:column;align-items:center}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-marca">Ingenium Network · <span>Claudia Maldonado</span></div>
+  <a href="https://go.hotmart.com/Y104911596L" target="_blank" class="nav-cta">Comprar ahora</a>
+</nav>
+<section class="hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">Ingenium Network · Claudia Maldonado</p>
+    <h1>Vender<br>No es <em>Suerte</em></h1>
+    <p class="hero-sub">El método completo para cerrar más ventas y convertir prospectos en clientes.</p>
+    <div class="hero-btns">
+      <a href="https://go.hotmart.com/Y104911596L" target="_blank" class="btn-primario">Obtener el libro → USD 14.99</a>
+      <a href="#afiliados" class="btn-secundario">Quiero ser afiliado</a>
+    </div>
+    <div class="hero-meta">
+      <span>23 capítulos</span><span>4 partes completas</span><span>PDF con ejercicios</span><span>Acceso inmediato</span>
+    </div>
+  </div>
+</section>
+<div class="separador"></div>
+<section class="propuesta" id="libro">
+  <div class="propuesta-grid">
+    <div class="propuesta-texto">
+      <p class="seccion-label">De qué trata</p>
+      <h2>Vender no es<br>un don. Es un <em>método.</em></h2>
+      <p>La mayoría de los vendedores improvisan. Reaccionan. Esperan que el cliente diga que sí sin saber por qué lo hace o por qué no lo hace.</p>
+      <p>Este libro te da la estructura que falta. <strong>Paso a paso, desde los fundamentos hasta la capacitación de equipos.</strong> Con ejercicios concretos para aplicar en tu próxima conversación de ventas.</p>
+      <p>Para vendedores que quieren resultados predecibles. Para líderes que quieren desarrollar equipos que vendan sin depender de ellos.</p>
+      <ul class="propuesta-puntos">
+        <li>Superá el miedo a vender y las objeciones más comunes</li>
+        <li>Construí tu propio sistema de ventas replicable</li>
+        <li>Aplicá técnicas de negociación y cierre avanzado</li>
+        <li>Gestioná tu cartera con métricas y KPIs reales</li>
+        <li>Liderá y capacitá equipos comerciales de alto rendimiento</li>
+      </ul>
+    </div>
+    <div class="propuesta-visual">
+      <div class="partes-grid">
+        <div class="parte-item"><div class="parte-num">Parte 01</div><div class="parte-titulo">Fundamentos</div><div class="parte-desc">Mentalidad, conocer al cliente, presentación, objeciones, cierre y seguimiento.</div></div>
+        <div class="parte-item"><div class="parte-num">Parte 02</div><div class="parte-titulo">Técnicas</div><div class="parte-desc">Marca personal, prospección, ventas digitales, negociación y cartera.</div></div>
+        <div class="parte-item"><div class="parte-num">Parte 03</div><div class="parte-titulo">Método</div><div class="parte-desc">Sistema de ventas, métricas, venta consultiva y psicología del comprador.</div></div>
+        <div class="parte-item"><div class="parte-num">Parte 04</div><div class="parte-titulo">El Líder que Vende</div><div class="parte-desc">Facilitar aprendizaje, medir resultados y construir equipos autónomos.</div></div>
+      </div>
+      <div class="capitulos-badge"><strong>23</strong> capítulos · Un ejercicio práctico al final de cada uno</div>
+    </div>
+  </div>
+</section>
+<div class="separador"></div>
+<section class="producto" id="comprar">
+  <div class="producto-inner">
+    <p class="seccion-label" style="text-align:center">El libro</p>
+    <h2 style="text-align:center;margin-bottom:48px">Un precio. Todo el método.</h2>
+    <div class="producto-card">
+      <div class="producto-header">
+        <div class="producto-nombre">Vender No es Suerte</div>
+        <div class="producto-sub">Versión PDF con ejercicios para imprimir y trabajar</div>
+      </div>
+      <div class="producto-body">
+        <p class="incluye-titulo">Incluye</p>
+        <ul class="incluye-lista">
+          <li>23 capítulos organizados en 4 partes</li>
+          <li>Un ejercicio práctico al final de cada capítulo</li>
+          <li>Técnicas de prospección, negociación y cierre</li>
+          <li>Sistema de ventas consultiva paso a paso</li>
+          <li>Módulo completo de liderazgo comercial</li>
+          <li>PDF descargable — cualquier dispositivo</li>
+          <li>Acceso inmediato vía Hotmart</li>
+        </ul>
+        <div class="producto-precio-bloque"><span class="precio-moneda">USD</span><span class="precio-usd">14.99</span></div>
+        <a href="https://go.hotmart.com/Y104911596L" target="_blank" class="btn-comprar">Comprar ahora — Acceso inmediato →</a>
+        <div class="garantia">🔒 <span>Garantía de 7 días</span> — Si no te es útil, Hotmart devuelve tu dinero. Sin preguntas.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="separador"></div>
+<section class="afiliados" id="afiliados">
+  <div class="afiliados-inner">
+    <p class="seccion-label">Programa de afiliados</p>
+    <h2>Recomendá el libro.<br><em>Ganás</em> con cada venta.</h2>
+    <div class="afiliados-grid">
+      <div class="afiliados-texto">
+        <p>Si tenés audiencia en negocios, ventas, emprendimiento o liderazgo, este libro encaja exactamente con lo que tu comunidad necesita.</p>
+        <p><strong>No necesitás crear contenido propio.</strong> Solo compartir el link. Cada vez que alguien compra a través de tu link de afiliado, recibís tu comisión automáticamente.</p>
+        <div class="comision-bloque">
+          <div class="comision-num">40%</div>
+          <div class="comision-label">de comisión por cada venta</div>
+          <div class="comision-detalle">Por cada libro vendido a <strong>USD 14.99</strong>,<br>vos ganás <strong>USD 5.20</strong> — automáticamente.</div>
+        </div>
+        <p>El programa es <strong>por aprobación</strong> — revisamos cada solicitud para asegurarnos de que sea una buena alianza para ambas partes.</p>
+      </div>
+      <div>
+        <ul class="afiliado-pasos">
+          <li><div class="paso-num">1</div><div class="paso-texto"><strong>Solicitá ser afiliado</strong><span>Hacé clic en el botón de abajo. Completás el formulario en Hotmart.</span></div></li>
+          <li><div class="paso-num">2</div><div class="paso-texto"><strong>Esperá la aprobación</strong><span>Revisamos tu perfil en 24-48hs. Te notificamos por email.</span></div></li>
+          <li><div class="paso-num">3</div><div class="paso-texto"><strong>Recibís tu link personalizado</strong><span>Hotmart te genera un link único que trackea tus ventas.</span></div></li>
+          <li><div class="paso-num">4</div><div class="paso-texto"><strong>Compartís y cobrás</strong><span>Compartís el link. Las comisiones se acumulan y se pagan automáticamente.</span></div></li>
+        </ul>
+        <div class="afiliado-cta">
+          <p>Las solicitudes se procesan en Hotmart. Necesitás tener o crear una cuenta gratuita.</p>
+          <a href="https://hotmart.com/es/marketplace/productos/vender-no-es-suerte-version-pdf-con-ejercicios/Y104911596L" target="_blank" class="btn-afiliado">Quiero ser afiliado →</a>
+          <p class="afiliado-nota">Hotmart · Programa de afiliados aprobados</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="separador"></div>
+<section class="autora" id="autora">
+  <div class="autora-inner">
+    <div class="autora-avatar">CM</div>
+    <div>
+      <p class="seccion-label">La autora</p>
+      <div class="autora-nombre">Claudia Maldonado</div>
+      <div class="autora-cargo">Ingeniera Comercial · MBA · Máster en Gestión de Proyectos</div>
+      <p class="autora-bio">Fundadora de <strong>Ingenium Network</strong>, empresa de capacitación y desarrollo profesional con base en Paraguay.</p>
+      <p class="autora-bio">Docente universitaria en Marketing y Gerencia de Marketing. Más de 20 años trabajando con equipos comerciales reales.</p>
+      <p class="autora-bio">Este libro es la síntesis de ese recorrido: <strong>lo que funciona, lo que no, y cómo sistematizar resultados en cualquier industria.</strong></p>
+      <div class="autora-contacto">claudia@ingenium.network · <a href="https://linkedin.com/in/claudiafiorela" target="_blank">LinkedIn: claudiafiorela</a></div>
+    </div>
+  </div>
+</section>
+<div class="separador"></div>
+<section class="faq" id="faq">
+  <div class="faq-inner">
+    <p class="seccion-label">Preguntas frecuentes</p>
+    <h2 style="margin-bottom:48px">Lo que más<br>nos <em>preguntan</em></h2>
+    <div class="faq-item abierto"><div class="faq-q">¿Cómo recibo el libro? <span>+</span></div><div class="faq-a">Hotmart te envía el acceso automáticamente al email que usaste para comprar, inmediatamente después del pago. Disponible 24/7.</div></div>
+    <div class="faq-item"><div class="faq-q">¿En qué formato está? <span>+</span></div><div class="faq-a">PDF descargable, compatible con cualquier dispositivo: teléfono, tablet, computadora. Podés imprimirlo para trabajar los ejercicios en papel.</div></div>
+    <div class="faq-item"><div class="faq-q">¿Para qué tipo de ventas sirve? <span>+</span></div><div class="faq-a">Cualquier tipo: productos físicos, servicios, ventas por WhatsApp, presenciales, B2B o B2C. El método es de principios universales.</div></div>
+    <div class="faq-item"><div class="faq-q">¿Soy nuevo en ventas, es para mí? <span>+</span></div><div class="faq-a">Sí. La Parte 1 empieza desde los fundamentos. No se asume experiencia previa. Si ya vendés, podés ir directo a la Parte 2 o 3.</div></div>
+    <div class="faq-item"><div class="faq-q">¿Tiene garantía? <span>+</span></div><div class="faq-a">7 días de garantía completa a través de Hotmart. Si no te es útil, solicitás el reembolso directamente en la plataforma. Sin complicaciones.</div></div>
+    <div class="faq-item"><div class="faq-q">¿Cómo funciona el programa de afiliados? <span>+</span></div><div class="faq-a">Solicitás ser afiliado en Hotmart, esperás aprobación (24-48hs), recibís tu link único y ganás el 40% (USD 5.20) por cada venta que generés. El pago es automático a través de Hotmart.</div></div>
+  </div>
+</section>
+<footer>
+  <div class="footer-marca">Ingenium Network · <span>Claudia Maldonado</span></div>
+  <div class="footer-links">claudia@ingenium.network · <a href="https://linkedin.com/in/claudiafiorela" target="_blank">LinkedIn</a></div>
+  <div class="footer-copy">© 2026 Ingenium Network EIRL · Todos los derechos reservados</div>
+</footer>
+<script>
+  document.querySelectorAll('.faq-item').forEach(i=>{i.addEventListener('click',()=>i.classList.toggle('abierto'))});
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();document.querySelector(a.getAttribute('href'))?.scrollIntoView({behavior:'smooth'})})});
+</script>
+</body>
+</html>
