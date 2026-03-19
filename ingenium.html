@@ -1,1 +1,409 @@
-test
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Ingenium Network EIRL · Mentoría Ejecutiva · Paraguay</title>
+<meta name="description" content="Mentoría ejecutiva 1-a-1, formación comercial y capacitación para MiPyMEs en Paraguay. Fundadora: Claudia Maldonado · Ingenium Network EIRL.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+<style>
+:root{--az:#1A5CBF;--azm:#4A90D9;--azc:#EAF2FB;--azo:#0F3878;--bl:#FFFFFF;--cr:#F6F9FD;--tx:#1A2540;--ts:#5A6A8A;--bd:rgba(26,92,191,.1);--sh:0 4px 32px rgba(26,92,191,.1)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:"DM Sans",sans-serif;background:#fff;color:var(--tx);line-height:1.65;overflow-x:hidden}
+.rev{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.rev.vis{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 5%;display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--bd);transition:box-shadow .3s}
+nav.sc{box-shadow:0 2px 20px rgba(26,92,191,.08)}
+.nl{display:flex;align-items:center;gap:10px;text-decoration:none}
+.nb{font-family:"DM Serif Display",serif;font-size:1.05rem;color:var(--az);line-height:1.1}
+.nb small{display:block;font-family:"DM Sans",sans-serif;font-size:.6rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--azm)}
+.nm{display:flex;align-items:center;gap:28px;list-style:none}
+.nm a{font-size:.8rem;font-weight:500;color:var(--ts);text-decoration:none;letter-spacing:.05em;text-transform:uppercase;transition:color .2s}
+.nm a:hover,.nm a.act{color:var(--az)}
+.nc{background:var(--az);color:white!important;padding:9px 20px;border-radius:6px;font-weight:600!important;letter-spacing:.02em!important;text-transform:none!important;font-size:.85rem!important;transition:background .2s}
+.nc:hover{background:var(--azo)!important}
+/* HERO */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:110px 5% 80px;gap:72px;position:relative;overflow:hidden}
+.hbg{position:absolute;inset:0;pointer-events:none}
+.hgr{position:absolute;inset:0;background-image:linear-gradient(var(--bd) 1px,transparent 1px),linear-gradient(90deg,var(--bd) 1px,transparent 1px);background-size:56px 56px}
+.hgl{position:absolute;top:-15%;right:-8%;width:55%;height:80%;background:radial-gradient(ellipse,rgba(74,144,217,.09) 0%,transparent 65%)}
+.hgl2{position:absolute;bottom:-10%;left:-5%;width:40%;height:60%;background:radial-gradient(ellipse,rgba(26,92,191,.06) 0%,transparent 65%)}
+.hc{position:relative;z-index:1;animation:fu .9s ease both}
+@keyframes fu{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+.hl{display:flex;align-items:center;gap:10px;font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--azm);margin-bottom:22px}
+.hl::before{content:"";display:block;width:28px;height:2px;background:var(--azm);border-radius:2px}
+.hero h1{font-family:"DM Serif Display",serif;font-size:clamp(2.6rem,4.5vw,4rem);line-height:1.06;letter-spacing:-.02em;color:var(--tx);margin-bottom:22px}
+.hero h1 em{font-style:italic;color:var(--az)}
+.hs{font-size:1.05rem;color:var(--ts);max-width:500px;line-height:1.75;font-weight:300;margin-bottom:40px}
+.hbt{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:52px}
+.bp{background:var(--az);color:white;padding:15px 34px;border-radius:6px;text-decoration:none;font-weight:600;font-size:.92rem;transition:all .2s;display:inline-flex;align-items:center;gap:8px}
+.bp:hover{background:var(--azo);transform:translateY(-2px);box-shadow:0 8px 24px rgba(26,92,191,.28)}
+.bs{border:1.5px solid var(--bd);color:var(--tx);padding:15px 34px;border-radius:6px;text-decoration:none;font-weight:500;font-size:.92rem;transition:all .2s}
+.bs:hover{border-color:var(--az);color:var(--az);background:var(--azc)}
+.hst{display:flex;gap:44px;padding-top:40px;border-top:1px solid var(--bd)}
+.hst>div span{font-family:"DM Serif Display",serif;font-size:2.1rem;color:var(--az);display:block;line-height:1}
+.hst>div small{font-size:.72rem;font-weight:600;color:var(--ts);letter-spacing:.06em;text-transform:uppercase;margin-top:4px;display:block}
+.hv{position:relative;z-index:1;animation:fu 1s ease .15s both}
+.hvc{background:white;border-radius:14px;box-shadow:var(--sh);border:1px solid var(--bd);overflow:hidden;margin-bottom:16px}
+.hvch{background:var(--az);padding:12px 18px;display:flex;align-items:center;gap:8px}
+.hvd{display:flex;gap:5px}.hvd span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.35)}
+.hvd span:first-child{background:rgba(255,255,255,.85)}
+.hvcht{font-size:.7rem;font-weight:600;color:rgba(255,255,255,.85);letter-spacing:.08em;text-transform:uppercase;margin-left:4px}
+.hvcb{padding:18px 20px}
+.hvr{display:flex;gap:12px;align-items:center;margin-bottom:12px}.hvr:last-child{margin-bottom:0}
+.hvi{width:36px;height:36px;border-radius:8px;background:var(--azc);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1rem}
+.hvlg{flex:1}.hvl{height:9px;background:var(--azc);border-radius:4px;margin-bottom:5px}
+.hvl.w70{width:70%}.hvl.w50{width:50%}.hvl.w85{width:85%}
+.hvb{display:inline-block;background:var(--azc);color:var(--az);font-size:.68rem;font-weight:700;padding:3px 9px;border-radius:20px;letter-spacing:.06em;text-transform:uppercase}
+.hvb.gr{background:#E6F4EA;color:#2E7D32}.hvb.or{background:#FEF3E2;color:#E65100}
+.hvm{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.hvmc{background:var(--cr);border-radius:10px;padding:14px;border:1px solid var(--bd)}
+.hvmc strong{font-family:"DM Serif Display",serif;font-size:1.5rem;color:var(--az);display:block;line-height:1}
+.hvmc small{font-size:.68rem;color:var(--ts);font-weight:500;margin-top:3px;display:block}
+/* TRUST */
+.trust{padding:28px 5%;background:var(--cr);border-top:1px solid var(--bd);border-bottom:1px solid var(--bd)}
+.ti{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap}
+.ti span{display:flex;align-items:center;gap:8px;font-size:.78rem;font-weight:600;color:var(--ts);letter-spacing:.04em;text-transform:uppercase}
+.ti span::before{content:"✓";color:var(--az);font-weight:800;font-size:.85rem}
+/* SECTIONS */
+section{padding:96px 5%}
+.sl{font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--azm);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.sl::before{content:"";width:24px;height:2px;background:var(--azm);border-radius:2px;display:block}
+h2{font-family:"DM Serif Display",serif;font-size:clamp(2rem,3.5vw,2.8rem);line-height:1.1;letter-spacing:-.02em;color:var(--tx);margin-bottom:16px}
+h2 em{font-style:italic;color:var(--az)}
+.si{max-width:1100px;margin:0 auto}
+/* MENTORIA */
+.ment{background:var(--tx);position:relative;overflow:hidden}
+.mbg{position:absolute;inset:0;background-image:radial-gradient(rgba(74,144,217,.07) 1px,transparent 1px);background-size:32px 32px}
+.ment .sl{color:var(--azm)}.ment .sl::before{background:var(--azm)}
+.ment h2{color:white}.ment h2 em{color:var(--azm)}
+.mi{font-size:1rem;color:rgba(255,255,255,.55);max-width:560px;line-height:1.75;margin-bottom:56px;font-weight:300}
+.pg{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.pi{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:32px 28px;transition:all .3s}
+.pi:hover{background:rgba(74,144,217,.12);border-color:rgba(74,144,217,.4);transform:translateY(-4px)}
+.pn2{font-family:"DM Serif Display",serif;font-size:3.5rem;color:rgba(74,144,217,.2);line-height:1;margin-bottom:16px;font-style:italic}
+.pic{font-size:1.8rem;margin-bottom:16px}
+.pi h3{font-size:1rem;font-weight:700;color:white;margin-bottom:12px;line-height:1.3}
+.pi p{font-size:.85rem;color:rgba(255,255,255,.5);line-height:1.65}
+.pt{display:inline-block;margin-top:16px;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--azm);border:1px solid rgba(74,144,217,.3);padding:3px 10px;border-radius:20px}
+.mc{margin-top:48px;text-align:center}
+.mc p{color:rgba(255,255,255,.4);font-size:.9rem;margin-bottom:20px;font-style:italic}
+/* PRODUCTOS */
+.prod{background:#fff}
+.pi2{font-size:1rem;color:var(--ts);max-width:540px;line-height:1.75;margin-bottom:56px;font-weight:300}
+.prg{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.prc{border:1px solid var(--bd);border-radius:12px;overflow:hidden;transition:all .3s;background:white;display:flex;flex-direction:column}
+.prc:hover{box-shadow:var(--sh);transform:translateY(-4px);border-color:var(--azm)}
+.prc.ft{border-color:var(--az);position:relative}
+.prc.ft::before{content:"DESTACADO";position:absolute;top:16px;right:16px;font-size:.6rem;font-weight:800;letter-spacing:.14em;background:var(--az);color:white;padding:3px 10px;border-radius:20px;z-index:1}
+.prh{padding:28px 28px 20px;border-bottom:1px solid var(--bd)}
+.pri{width:44px;height:44px;background:var(--azc);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:14px}
+.prt{font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--azm);margin-bottom:8px}
+.prn{font-family:"DM Serif Display",serif;font-size:1.25rem;color:var(--tx);line-height:1.25;margin-bottom:6px}
+.prs{font-size:.82rem;color:var(--ts);font-style:italic}
+.prb{padding:20px 28px;flex:1}
+.prd{font-size:.85rem;color:var(--ts);line-height:1.65;margin-bottom:16px}
+.prl{list-style:none;margin-bottom:20px}
+.prl li{font-size:.82rem;color:var(--ts);padding:5px 0;display:flex;align-items:flex-start;gap:8px}
+.prl li::before{content:"→";color:var(--az);flex-shrink:0;font-size:.8rem;margin-top:1px}
+.prf{padding:0 28px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.prp{font-family:"DM Serif Display",serif;font-size:1.3rem;color:var(--tx)}
+.prp small{font-family:"DM Sans",sans-serif;font-size:.72rem;color:var(--ts);font-weight:500;display:block;margin-top:2px}
+.bpr{background:var(--az);color:white;padding:10px 20px;border-radius:6px;text-decoration:none;font-size:.82rem;font-weight:600;transition:all .2s;white-space:nowrap;display:inline-block}
+.bpr:hover{background:var(--azo);transform:translateY(-1px)}
+.bpr.ol{background:transparent;color:var(--az);border:1.5px solid var(--az)}
+.bpr.ol:hover{background:var(--az);color:white}
+/* B2B */
+.b2b{background:var(--cr)}
+.b2bg{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.b2bt p.desc{font-size:.95rem;color:var(--ts);line-height:1.75;margin-bottom:16px;font-weight:300}
+.b2bl{list-style:none;margin:28px 0}
+.b2bl li{display:flex;align-items:flex-start;gap:14px;padding:14px 0;border-bottom:1px solid var(--bd);font-size:.9rem;color:var(--ts)}
+.b2bl li:last-child{border-bottom:none}
+.b2bl li strong{color:var(--tx);display:block;margin-bottom:3px}
+.b2bn{width:28px;height:28px;background:var(--azc);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;color:var(--az);flex-shrink:0;margin-top:2px}
+.b2bv{background:white;border-radius:16px;padding:36px;box-shadow:var(--sh);border:1px solid var(--bd)}
+.b2bvt{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--azm);margin-bottom:20px}
+.b2bi{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--bd)}
+.b2bi:last-child{border-bottom:none}
+.b2bii{width:38px;height:38px;background:var(--azc);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.b2bi h4{font-size:.88rem;font-weight:600;color:var(--tx);margin-bottom:2px}
+.b2bi p{font-size:.75rem;color:var(--ts)}
+.b2bib{margin-left:auto;font-size:.65rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--azc);color:var(--az);padding:3px 10px;border-radius:20px;flex-shrink:0}
+/* AUTORA */
+.aut{background:#fff}
+.aig{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;max-width:1100px;margin:0 auto}
+.aff{background:var(--azc);border-radius:16px;min-height:380px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;border:1px solid var(--bd)}
+.afp{font-family:"DM Serif Display",serif;font-size:5rem;color:var(--az);opacity:.18;font-style:italic}
+.afover{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(26,92,191,.18));padding:40px 28px 28px}
+.afover strong{font-family:"DM Serif Display",serif;font-size:1.4rem;color:white;text-shadow:0 2px 8px rgba(0,0,0,.3);display:block}
+.afover small{font-size:.75rem;color:rgba(255,255,255,.8);margin-top:4px;font-weight:500}
+.afc{position:absolute;bottom:-18px;right:-18px;background:white;border-radius:12px;padding:14px 18px;box-shadow:var(--sh);border:1px solid var(--bd)}
+.afc strong{font-family:"DM Serif Display",serif;font-size:1.7rem;color:var(--az);display:block;line-height:1}
+.afc small{font-size:.68rem;color:var(--ts);font-weight:500}
+.ac .sl{margin-bottom:12px}
+.ac h2{margin-bottom:6px}
+.acg{font-size:.85rem;color:var(--azm);font-weight:600;letter-spacing:.04em;margin-bottom:24px;text-transform:uppercase}
+.ab{font-size:.95rem;color:var(--ts);line-height:1.8;margin-bottom:14px;font-weight:300}
+.ab strong{color:var(--tx);font-weight:600}
+.ach{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0}
+.ch{font-size:.72rem;font-weight:600;letter-spacing:.04em;background:var(--azc);color:var(--az);padding:6px 14px;border-radius:20px}
+.aco{display:flex;flex-direction:column;gap:8px;margin-top:24px}
+.aco a{display:inline-flex;align-items:center;gap:8px;font-size:.85rem;color:var(--ts);text-decoration:none;transition:color .2s}
+.aco a:hover{color:var(--az)}
+/* CTA FINAL */
+.ctaf{background:var(--az);position:relative;overflow:hidden;text-align:center;padding:96px 5%}
+.ctabg{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.06) 1px,transparent 1px);background-size:28px 28px}
+.ctagl{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:60%;height:80%;background:radial-gradient(ellipse,rgba(255,255,255,.08) 0%,transparent 65%)}
+.ctai{position:relative;z-index:1;max-width:640px;margin:0 auto}
+.ctaf .sl{justify-content:center;color:rgba(255,255,255,.45)}.ctaf .sl::before{background:rgba(255,255,255,.25)}
+.ctaf h2{color:white;font-size:clamp(2.2rem,4vw,3.2rem);margin-bottom:16px}
+.ctaf h2 em{color:rgba(255,255,255,.65);font-style:italic}
+.ctaf>div>p{color:rgba(255,255,255,.6);font-size:1rem;line-height:1.75;margin-bottom:40px;font-weight:300}
+.ctab{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.bw{background:white;color:var(--az);padding:16px 36px;border-radius:6px;text-decoration:none;font-weight:700;font-size:.95rem;transition:all .2s}
+.bw:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2)}
+.bwo{border:1.5px solid rgba(255,255,255,.4);color:white;padding:16px 36px;border-radius:6px;text-decoration:none;font-weight:500;font-size:.95rem;transition:all .2s}
+.bwo:hover{border-color:white;background:rgba(255,255,255,.1)}
+/* FOOTER */
+footer{background:var(--tx);padding:48px 5% 32px}
+.fi{max-width:1100px;margin:0 auto}
+.ft2{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:40px}
+.fb{font-family:"DM Serif Display",serif;font-size:1.2rem;color:white;margin-bottom:10px}
+.fb small{display:block;font-family:"DM Sans",sans-serif;font-size:.62rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-top:2px}
+.fd{font-size:.82rem;color:rgba(255,255,255,.38);line-height:1.7;margin-top:12px}
+.fc h4{font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.33);margin-bottom:14px}
+.fc a{display:block;font-size:.82rem;color:rgba(255,255,255,.48);text-decoration:none;margin-bottom:8px;transition:color .2s}
+.fc a:hover{color:white}
+.fbot{border-top:1px solid rgba(255,255,255,.08);padding-top:22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.fcp{font-size:.74rem;color:rgba(255,255,255,.2)}
+.flg{display:flex;gap:20px}.flg a{font-size:.72rem;color:rgba(255,255,255,.2);text-decoration:none;transition:color .2s}
+.flg a:hover{color:rgba(255,255,255,.5)}
+/* MOBILE */
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;gap:40px;padding:100px 5% 60px}
+  .hv{display:none}
+  .pg{grid-template-columns:1fr 1fr}
+  .prg{grid-template-columns:1fr}
+  .b2bg,.aig{grid-template-columns:1fr;gap:40px}
+  .ft2{grid-template-columns:1fr 1fr;gap:32px}
+  .nm{display:none}
+}
+@media(max-width:600px){.pg{grid-template-columns:1fr}.ft2{grid-template-columns:1fr}.hst{gap:24px}}
+</style>
+</head>
+<body>
+
+<nav id="nv">
+  <a href="#" class="nl">
+    <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
+      <circle cx="17" cy="17" r="16" stroke="#1A5CBF" stroke-width="1.5"/>
+      <circle cx="17" cy="9" r="2.8" fill="#1A5CBF"/>
+      <circle cx="25" cy="17" r="2.3" fill="#4A90D9"/>
+      <circle cx="9" cy="17" r="2.3" fill="#4A90D9"/>
+      <circle cx="17" cy="25" r="1.8" fill="#1A5CBF" opacity=".55"/>
+      <circle cx="22" cy="12" r="1.7" fill="#4A90D9" opacity=".65"/>
+      <circle cx="12" cy="12" r="1.7" fill="#4A90D9" opacity=".65"/>
+      <circle cx="22" cy="22" r="1.4" fill="#1A5CBF" opacity=".45"/>
+      <circle cx="12" cy="22" r="1.4" fill="#1A5CBF" opacity=".45"/>
+      <line x1="17" y1="9" x2="25" y2="17" stroke="#4A90D9" stroke-width="1" opacity=".35"/>
+      <line x1="17" y1="9" x2="9" y2="17" stroke="#4A90D9" stroke-width="1" opacity=".35"/>
+      <line x1="25" y1="17" x2="17" y2="25" stroke="#1A5CBF" stroke-width="1" opacity=".28"/>
+      <line x1="9" y1="17" x2="17" y2="25" stroke="#1A5CBF" stroke-width="1" opacity=".28"/>
+    </svg>
+    <div class="nb">Ingenium Network<small>EIRL · Paraguay</small></div>
+  </a>
+  <ul class="nm">
+    <li><a href="#mentoria">Mentoría</a></li>
+    <li><a href="#productos">Productos</a></li>
+    <li><a href="#empresas">Empresas</a></li>
+    <li><a href="#autora">Claudia</a></li>
+    <li><a href="https://wa.me/595987462206?text=Hola%20Claudia%2C%20me%20interesa%20Ingenium%20Network" target="_blank" class="nc">Hablemos →</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hbg"><div class="hgr"></div><div class="hgl"></div><div class="hgl2"></div></div>
+  <div class="hc">
+    <div class="hl">Mentoría Ejecutiva · Paraguay</div>
+    <h1>De sobrevivir a escalar.<br>Tu negocio con <em>estrategia.</em></h1>
+    <p class="hs">Mentoría 1-a-1 para dueños de negocios que quieren ejecutar con la eficiencia de un experto. Estrategia, ventas, equipo y tecnología — todo integrado en un método probado.</p>
+    <div class="hbt">
+      <a href="https://wa.me/595987462206?text=Hola%20Claudia%2C%20quiero%20saber%20más%20sobre%20la%20mentoría%201-a-1" target="_blank" class="bp">Quiero mi mentoría →</a>
+      <a href="#productos" class="bs">Ver recursos</a>
+    </div>
+    <div class="hst">
+      <div><span>14+</span><small>Años activa</small></div>
+      <div><span>4×4</span><small>Método propio</small></div>
+      <div><span>LATAM</span><small>Alcance regional</small></div>
+    </div>
+  </div>
+  <div class="hv">
+    <div class="hvc">
+      <div class="hvch"><div class="hvd"><span></span><span></span><span></span></div><span class="hvcht">Mentoría 4×4 · Plan activo</span></div>
+      <div class="hvcb">
+        <div class="hvr"><div class="hvi">📊</div><div class="hvlg"><div class="hvl w85"></div><div class="hvl w50"></div></div><span class="hvb gr">Activo</span></div>
+        <div class="hvr"><div class="hvi">🎯</div><div class="hvlg"><div class="hvl w70"></div><div class="hvl w50"></div></div><span class="hvb">En curso</span></div>
+        <div class="hvr"><div class="hvi">👥</div><div class="hvlg"><div class="hvl w85"></div><div class="hvl w50"></div></div><span class="hvb or">Pendiente</span></div>
+      </div>
+    </div>
+    <div class="hvm">
+      <div class="hvmc"><strong>23</strong><small>Capítulos · Vender No es Suerte</small></div>
+      <div class="hvmc"><strong>4×4</strong><small>Pilares · Mentoría Ejecutiva</small></div>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="ti">
+    <span>Publicado en Amazon Kindle</span>
+    <span>Disponible en Hotmart</span>
+    <span>Mentoría 1-a-1 presencial</span>
+    <span>+14 años de trayectoria</span>
+    <span>Docente universitaria activa</span>
+  </div>
+</div>
+
+<section class="ment" id="mentoria">
+  <div class="mbg"></div>
+  <div class="si" style="position:relative;z-index:1">
+    <p class="sl rev">La Mentoría</p>
+    <h2 class="rev d1">Los <em>4 pilares</em> del crecimiento<br>de tu negocio</h2>
+    <p class="mi rev d2">La Mentoría 4×4 es el sistema que uso con dueños de MiPyMEs que quieren dejar la operación diaria atrás y enfocarse en la dirección estratégica. Cuatro pilares, un proceso claro, resultados medibles.</p>
+    <div class="pg">
+      <div class="pi rev d1"><div class="pn2">01</div><div class="pic">📋</div><h3>Gestión Administrativa y Financiera</h3><p>Procesos ágiles y controles internos robustos. Orden, transparencia y rentabilidad automatizada.</p><div class="pt">Finanzas · Procesos</div></div>
+      <div class="pi rev d2"><div class="pn2">02</div><div class="pic">🎯</div><h3>Estrategia Comercial y Ventas</h3><p>Convertimos tus ideas en ingresos. Marketing digital y planes de ventas predecibles con flujo constante.</p><div class="pt">Ventas · Marketing</div></div>
+      <div class="pi rev d3"><div class="pn2">03</div><div class="pic">👥</div><h3>Recursos Humanos y Liderazgo</h3><p>Coaching y RRHH para formar, motivar y alinear a tu equipo con la visión de la empresa.</p><div class="pt">Liderazgo · Equipo</div></div>
+      <div class="pi rev d4"><div class="pn2">04</div><div class="pic">⚡</div><h3>Enfoque Tecnológico</h3><p>CRM, ERP y herramientas digitales para que la tecnología trabaje para ti, no al revés.</p><div class="pt">CRM · Automatización</div></div>
+    </div>
+    <div class="mc rev">
+      <p>Mentoría 1-a-1 · Presencial o virtual · Asunción y Gran Asunción</p>
+      <a href="https://wa.me/595987462206?text=Hola%20Claudia%2C%20quiero%20saber%20más%20sobre%20la%20Mentoría%204x4" target="_blank" class="bp">Consultá disponibilidad →</a>
+    </div>
+  </div>
+</section>
+
+<section class="prod" id="productos">
+  <div class="si">
+    <p class="sl rev">Recursos y Productos</p>
+    <h2 class="rev d1">Herramientas para vender<br>y <em>crecer con método</em></h2>
+    <p class="pi2 rev d2">Libros, guías y sistemas de capacitación diseñados desde la práctica real. Cada producto es independiente y aplicable desde el primer día.</p>
+    <div class="prg">
+      <div class="prc ft rev d1">
+        <div class="prh"><div class="pri">📖</div><div class="prt">Libro · Amazon Kindle &amp; PDF</div><div class="prn">Vender No es Suerte</div><div class="prs">El método completo para cerrar más ventas</div></div>
+        <div class="prb"><p class="prd">23 capítulos. 4 partes. Un método construido desde la práctica real con vendedores y equipos en Latinoamérica.</p><ul class="prl"><li>Mentalidad, prospección, cierre y seguimiento</li><li>Ventas digitales y por WhatsApp</li><li>Liderazgo de equipos comerciales</li><li>Ejercicio práctico por capítulo</li></ul></div>
+        <div class="prf">
+          <div class="prp">USD 9.99<small>Kindle · USD 14.99 PDF + ejercicios</small></div>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <a href="https://www.amazon.com/dp/B0GSSXHKVY" target="_blank" class="bpr">Amazon →</a>
+            <a href="https://go.hotmart.com/Y104911596L" target="_blank" class="bpr ol">Hotmart →</a>
+          </div>
+        </div>
+      </div>
+      <div class="prc rev d2">
+        <div class="prh"><div class="pri">📦</div><div class="prt">Pack Completo · 4 Guías</div><div class="prn">Vendedores que Saben, Venden</div><div class="prs">Sistema completo de ventas profesionales</div></div>
+        <div class="prb"><p class="prd">Del vendedor nuevo al profesional de alto rendimiento. Tres niveles progresivos más la guía del capacitador interno.</p><ul class="prl"><li>Guía Básica — Fundamentos de ventas</li><li>Guía Intermedia — Ventas digitales y negociación</li><li>Guía Avanzada — Estrategia, KPIs y liderazgo</li><li>Guía del Capacitador Interno (B2B)</li></ul></div>
+        <div class="prf">
+          <div class="prp">Pack completo<small>Consultá precio por WhatsApp</small></div>
+          <a href="https://go.hotmart.com/F104794550X" target="_blank" class="bpr">Ver pack →</a>
+        </div>
+      </div>
+      <div class="prc rev d3">
+        <div class="prh"><div class="pri">🎓</div><div class="prt">Talleres Presenciales</div><div class="prn">Capacitación In-Company</div><div class="prs">Para equipos de ventas y líderes comerciales</div></div>
+        <div class="prb"><p class="prd">Talleres para ejecutar, no solo escuchar. Cada sesión incluye ejercicios, roleplay y plan de acción inmediato.</p><ul class="prl"><li>Vendé Sin Vergüenza — Ventas para MiPyMEs</li><li>Liderazgo Comercial de Equipos</li><li>Técnicas de Cierre y Manejo de Objeciones</li><li>Media jornada o jornada completa</li></ul></div>
+        <div class="prf">
+          <div class="prp">A medida<small>Presencial · Asunción y Gran Asunción</small></div>
+          <a href="https://wa.me/595987462206?text=Me%20interesa%20un%20taller%20para%20mi%20equipo" target="_blank" class="bpr">Consultar →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="b2b" id="empresas">
+  <div class="si">
+    <div class="b2bg">
+      <div class="b2bt">
+        <p class="sl rev">Programa Empresas</p>
+        <h2 class="rev d1">Para líderes que quieren<br>equipos que <em>vendan solos</em></h2>
+        <p class="desc rev d2">El sistema B2B de Ingenium Network está diseñado para responsables de RRHH, supervisores de ventas y dueños que quieren que el aprendizaje quede en la empresa.</p>
+        <ul class="b2bl rev d3">
+          <li><div class="b2bn">1</div><div><strong>Guías profesionales para cada vendedor</strong>Cada participante trabaja con su propio material. El conocimiento queda en sus manos.</div></li>
+          <li><div class="b2bn">2</div><div><strong>Habilitás a tu responsable interno</strong>Capacitamos a quien va a replicar el sistema. Sin dependencia externa permanente.</div></li>
+          <li><div class="b2bn">3</div><div><strong>Medís el resultado</strong>Indicadores de impacto antes/después para que sepas exactamente qué cambió.</div></li>
+        </ul>
+        <a href="https://wa.me/595987462206?text=Hola%20Claudia%2C%20quiero%20cotizar%20el%20programa%20B2B%20para%20mi%20empresa" target="_blank" class="bp rev">Cotizá para tu empresa →</a>
+      </div>
+      <div class="b2bv rev">
+        <div class="b2bvt">Sistema B2B · Incluye</div>
+        <div class="b2bi"><div class="b2bii">📘</div><div><h4>Guías digitales por vendedor</h4><p>Básica + Intermedia + Avanzada</p></div><div class="b2bib">Por persona</div></div>
+        <div class="b2bi"><div class="b2bii">🎓</div><div><h4>Guía del Capacitador Interno</h4><p>Manual completo para facilitar sesiones</p></div><div class="b2bib">Incluido</div></div>
+        <div class="b2bi"><div class="b2bii">📊</div><div><h4>Plantilla Excel de KPIs</h4><p>Seguimiento y métricas de ventas</p></div><div class="b2bib">Incluido</div></div>
+        <div class="b2bi"><div class="b2bii">🍩‍🏫</div><div><h4>Capacitación al responsable</h4><p>Media o jornada completa con Claudia</p></div><div class="b2bib">Opcional</div></div>
+        <div style="margin-top:18px;padding-top:14px;border-top:1px solid var(--bd);font-size:.76rem;color:var(--ts);text-align:center">Mínimo 2 personas · Sin exclusividad</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="aut" id="autora">
+  <div class="aig">
+    <div class="rev" style="position:relative">
+      <div class="aff">
+        <div class="afp">CM</div>
+        <div class="afover"><strong>Claudia Maldonado</strong><small>Mentora Ejecutiva · Ingenium Network EIRL</small></div>
+      </div>
+      <div class="afc"><strong>14+</strong><small>Años de trayectoria</small></div>
+    </div>
+    <div class="ac">
+      <p class="sl rev">La autora y mentora</p>
+      <h2 class="rev d1"><em>Claudia</em><br>Maldonado</h2>
+      <div class="acg rev d2">Ing. Com. · MBA · Business Trainer · Coach Ejecutivo</div>
+      <p class="ab rev d2">Fundadora de <strong>Ingenium Network EIRL</strong>, empresa de capacitación y desarrollo profesional con base en Paraguay. Mi misión es simple: que tu MiPyME deje de sobrevivir para empezar a escalar con estrategia.</p>
+      <p class="ab rev d3">Mi mentoría es <strong>1-a-1</strong> y está diseñada para dueños de negocios que buscan ejecutar con la eficiencia de un experto, sin la complejidad de una consultora. Te doy el know-how ejecutivo y la hoja de ruta clara para lograrlo.</p>
+      <p class="ab rev d3">Docente universitaria en áreas de Marketing, Administración de Empresas, Gestión Comercial y Recursos Humanos en distintas universidades nacionales. Más de 20 años trabajando con vendedores y equipos comerciales en distintos rubros de Latinoamérica.</p>
+      <div class="ach rev d4"><span class="ch">Mentora Ejecutiva</span><span class="ch">Business Trainer</span><span class="ch">Coach Ejecutivo</span><span class="ch">Docente Universitaria</span><span class="ch">Autora</span><span class="ch">Paraguay</span></div>
+      <div class="aco rev d4">
+        <a href="mailto:ingenium.nt@gmail.com">✉ ingenium.nt@gmail.com</a>
+        <a href="tel:+595987462206">📱 +595 987 462 206</a>
+        <a href="https://www.linkedin.com/in/claudiafiorella/" target="_blank">💼 LinkedIn: claudiafiorella</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ctaf">
+  <div class="ctabg"></div><div class="ctagl"></div>
+  <div class="ctai rev">
+    <p class="sl">Empezá hoy</p>
+    <h2>Es hora de que tu negocio<br>se ordene y <em>crezca</em></h2>
+    <p>Si estás listo para dejar la operación diaria atrás y enfocarte en la dirección estratégica y la expansión — conversemos.</p>
+    <div class="ctab">
+      <a href="https://wa.me/595987462206?text=Hola%20Claudia%2C%20quiero%20saber%20más%20sobre%20Ingenium%20Network" target="_blank" class="bw">Escribime por WhatsApp</a>
+      <a href="#productos" class="bwo">Ver todos los productos</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fi">
+    <div class="ft2">
+      <div><div class="fb">Ingenium Network<small>EIRL · Asunción, Paraguay</small></div><p class="fd">Mentoría ejecutiva 1-a-1, formación comercial y herramientas de desarrollo profesional para MiPyMEs y vendedores en Paraguay y Latinoamérica.</p></div>
+      <div class="fc"><h4>Mentoría</h4><a href="#mentoria">Mentoría 4×4</a><a href="#empresas">Programa B2B</a><a href="#autora">Sobre Claudia</a><a href="https://wa.me/595987462206" target="_blank">Contacto</a></div>
+      <div class="fc"><h4>Productos</h4><a href="https://www.amazon.com/dp/B0GSSXHKVY" target="_blank">Vender No es Suerte</a><a href="vender-no-es-suerte.html">Libro PDF + Ejercicios</a><a href="https://go.hotmart.com/F104794550X" target="_blank">Pack VSV Completo</a><a href="#productos">Talleres</a></div>
+      <div class="fc"><h4>Contacto</h4><a href="mailto:ingenium.nt@gmail.com">ingenium.nt@gmail.com</a><a href="tel:+595987462206">+595 987 462 206</a><a href="https://www.linkedin.com/in/claudiafiorella/" target="_blank">LinkedIn: claudiafiorella</a><a href="#">Asunción, Paraguay</a></div>
+    </div>
+    <div class="fbot"><div class="fcp">© 2026 Ingenium Network EIRL · Todos los derechos reservados</div><div class="flg"><a href="#">Privacidad</a><a href="#">Términos</a></div></div>
+  </div>
+</footer>
+
+<script>
+const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add("vis")}),{threshold:.12});
+document.querySelectorAll(".rev").forEach(el=>obs.observe(el));
+window.addEventListener("scroll",()=>document.getElementById("nv").classList.toggle("sc",scrollY>40));
+</script>
+</body>
+</html>
