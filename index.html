@@ -57,8 +57,11 @@ body{background:var(--blue-dark);color:var(--paper);font-family:'DM Sans',sans-s
 .pack-price-block .pack-amount{font-family:'Playfair Display',serif;font-size:3rem;font-weight:900;line-height:1;color:var(--gold);}
 .pack-price-block .pack-currency{font-size:1rem;color:var(--gold);margin-right:.2rem;}
 .pack-price-block .ahorro{font-size:.78rem;color:rgba(200,164,90,.8);margin-top:.3rem;}
-.btn-pack{flex:1;min-width:200px;text-align:center;padding:1.1rem 2rem;background:var(--gold);color:var(--blue-dark);text-decoration:none;font-weight:700;font-size:.95rem;letter-spacing:.05em;text-transform:uppercase;transition:all .2s;}
+.pack-buttons{display:flex;flex-direction:column;gap:.75rem;flex:1;min-width:200px;}
+.btn-pack{text-align:center;padding:1.1rem 2rem;background:var(--gold);color:var(--blue-dark);text-decoration:none;font-weight:700;font-size:.95rem;letter-spacing:.05em;text-transform:uppercase;transition:all .2s;display:block;}
 .btn-pack:hover{background:var(--gold-light);transform:translateY(-2px);}
+.btn-afiliado-pack{display:block;text-align:center;padding:.65rem 2rem;text-decoration:none;font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:rgba(200,164,90,.6);border:1px solid rgba(200,164,90,.25);transition:all .2s;}
+.btn-afiliado-pack:hover{color:var(--gold);border-color:rgba(200,164,90,.55);}
 .garantia{text-align:center;padding:3.5rem 2rem;background:var(--blue-dark);border-top:1px solid rgba(200,164,90,.1);}
 .garantia-icon{font-size:2.5rem;margin-bottom:1rem;}
 .garantia h3{font-family:'Playfair Display',serif;font-size:1.4rem;margin-bottom:.6rem;}
@@ -82,44 +85,72 @@ footer a{color:rgba(200,164,90,.7);text-decoration:none;}
 </style>
 </head>
 <body>
+
 <section class="hero" id="inicio">
   <p class="hero-label">Ingenium Network · Claudia Maldonado</p>
   <h1>Vendedores que <em>Saben</em>, Venden</h1>
   <p>Guías prácticas de ventas para quien quiere dejar de improvisar y empezar a cerrar. Desde los fundamentos hasta la estrategia de escala.</p>
   <a href="#guias" class="hero-cta">Ver las guías ↓</a>
 </section>
+
 <div class="divider"></div>
+
 <section class="intro">
   <h2>¿Qué diferencia a un vendedor que cierra del que solo ofrece?</h2>
   <p>El conocimiento. La técnica. La práctica sistemática. Estas guías condensan años de experiencia en pasos concretos que podés aplicar hoy mismo.</p>
 </section>
+
 <div class="divider"></div>
+
 <section class="guias" id="guias">
   <p class="section-label">Colección completa · Tres niveles</p>
   <div class="cards">
+
     <div class="card card-basica">
-      <span class="card-nivel">Nivel Básico</span><h3>Guía Básica</h3>
+      <span class="card-nivel">Nivel Básico</span>
+      <h3>Guía Básica</h3>
       <p class="card-desc">Los fundamentos que todo vendedor necesita dominar antes de intentar cualquier técnica avanzada.</p>
-      <ul class="card-features"><li>6 capítulos de fundamentos</li><li>Cómo superar el miedo a vender</li><li>Primeras técnicas de cierre</li><li>Checklist de ventas incluido</li></ul>
+      <ul class="card-features">
+        <li>6 capítulos de fundamentos</li>
+        <li>Cómo superar el miedo a vender</li>
+        <li>Primeras técnicas de cierre</li>
+        <li>Checklist de ventas incluido</li>
+      </ul>
       <div class="card-price"><span class="currency">USD</span><span class="amount">9</span></div>
-      <a href="https://go.hotmart.com/B104792745V" class="btn-comprar" target="_blank">Comprar ahora →</a>
+      <a href="https://pay.hotmart.com/B104792745V" class="btn-comprar" target="_blank">Comprar ahora →</a>
     </div>
+
     <div class="card card-intermedia">
-      <span class="card-nivel">Nivel Intermedio</span><h3>Guía Intermedia</h3>
+      <span class="card-nivel">Nivel Intermedio</span>
+      <h3>Guía Intermedia</h3>
       <p class="card-desc">Convertí conversaciones de WhatsApp en ventas reales con scripts probados y técnicas de persuasión.</p>
-      <ul class="card-features"><li>7 capítulos avanzados</li><li>30 scripts de WhatsApp</li><li>Método SPIN adaptado</li><li>Bonus: 5 mensajes que reactivan clientes</li></ul>
+      <ul class="card-features">
+        <li>7 capítulos avanzados</li>
+        <li>30 scripts de WhatsApp</li>
+        <li>Método SPIN adaptado</li>
+        <li>Bonus: 5 mensajes que reactivan clientes</li>
+      </ul>
       <div class="card-price"><span class="currency">USD</span><span class="amount">15</span></div>
-      <a href="https://go.hotmart.com/O104792862B" class="btn-comprar" target="_blank">Comprar ahora →</a>
+      <a href="https://pay.hotmart.com/O104792862B" class="btn-comprar" target="_blank">Comprar ahora →</a>
     </div>
+
     <div class="card card-avanzada">
-      <span class="card-nivel">Nivel Avanzado</span><h3>Guía Avanzada</h3>
+      <span class="card-nivel">Nivel Avanzado</span>
+      <h3>Guía Avanzada</h3>
       <p class="card-desc">Estrategia, liderazgo y métricas para construir un negocio sólido y escalable.</p>
-      <ul class="card-features"><li>8 capítulos de alto nivel</li><li>Sistema de KPIs comerciales</li><li>Cómo liderar un equipo</li><li>Bonus: Kit del Propietario + Excel KPIs</li></ul>
+      <ul class="card-features">
+        <li>8 capítulos de alto nivel</li>
+        <li>Sistema de KPIs comerciales</li>
+        <li>Cómo liderar un equipo</li>
+        <li>Bonus: Kit del Propietario + Excel KPIs</li>
+      </ul>
       <div class="card-price"><span class="currency">USD</span><span class="amount">25</span></div>
-      <a href="https://go.hotmart.com/S104792928R" class="btn-comprar" target="_blank">Comprar ahora →</a>
+      <a href="https://pay.hotmart.com/S104792928R" class="btn-comprar" target="_blank">Comprar ahora →</a>
     </div>
+
   </div>
 </section>
+
 <section class="pack-section" id="pack">
   <div class="pack-inner">
     <h2>Pack Completo<br><em>Las 3 Guías</em></h2>
@@ -136,26 +167,37 @@ footer a{color:rgba(200,164,90,.7);text-decoration:none;}
         <div><span class="pack-currency">USD</span><span class="pack-amount">39</span></div>
         <p class="ahorro">Ahorrás USD 10 · Acceso inmediato</p>
       </div>
-      <a href="https://go.hotmart.com/F104794550X" class="btn-pack" target="_blank">Quiero el Pack completo →</a>
+      <div class="pack-buttons">
+        <a href="https://pay.hotmart.com/F104794550X" class="btn-pack" target="_blank">Quiero el Pack completo →</a>
+        <a href="https://hotmart.com/es/marketplace/productos/vendedores-que-saben-venden-pack-completo-3-guias/F104794550X" class="btn-afiliado-pack" target="_blank">Quiero ser afiliado</a>
+      </div>
     </div>
   </div>
 </section>
+
 <section class="garantia">
   <div class="garantia-icon">🔒</div>
   <h3>Garantía de 7 días</h3>
   <p>Si las guías no te son útiles, te devolvemos el dinero sin preguntas. Cero riesgo.</p>
 </section>
+
 <div class="divider"></div>
+
 <section class="autor">
   <div class="autor-text">
     <p class="autor-label">Sobre la autora</p>
     <h2>Claudia Maldonado</h2>
     <p>Ingeniera Comercial, MBA y Máster en Gestión de Proyectos. Fundadora de Ingenium Network.</p>
     <p>Estas guías nacen de años trabajando con equipos comerciales reales: lo que funciona, lo que no, y cómo sistematizar resultados en cualquier industria.</p>
-    <p style="color:rgba(200,164,90,.8);font-size:.83rem">claudia@ingenium.network · LinkedIn: claudiafiorela</p>
+    <p style="color:rgba(200,164,90,.8);font-size:.83rem">
+      <a href="mailto:ingenium.nt@gmail.com" style="color:rgba(200,164,90,.8);">ingenium.nt@gmail.com</a> · 
+      <a href="https://linkedin.com/in/claudiafiorella" target="_blank" style="color:rgba(200,164,90,.8);">LinkedIn: claudiafiorella</a>
+    </p>
   </div>
 </section>
+
 <div class="divider"></div>
+
 <section class="faq">
   <h2 class="faq-title">Preguntas frecuentes</h2>
   <div class="faq-item"><p class="faq-q">¿Cómo recibo las guías?</p><p class="faq-a">Hotmart te envía el acceso inmediatamente después del pago. Automático, 24/7.</p></div>
@@ -164,11 +206,15 @@ footer a{color:rgba(200,164,90,.7);text-decoration:none;}
   <div class="faq-item"><p class="faq-q">¿Por dónde empiezo?</p><p class="faq-a">Si sos nuevo, la Básica. Si ya vendés, la Intermedia. Si querés el sistema completo, el Pack.</p></div>
   <div class="faq-item"><p class="faq-q">¿Y si no me satisface?</p><p class="faq-a">7 días de garantía completa a través de Hotmart. Sin complicaciones.</p></div>
 </section>
+
 <footer>
-  <p><strong style="color:var(--gold);font-family:'Playfair Display',serif;font-size:1rem">Ingenium Network EIRL</strong><br>
-  <a href="mailto:claudia@ingenium.network">claudia@ingenium.network</a> · <a href="https://linkedin.com/in/claudiafiorela" target="_blank">LinkedIn: claudiafiorela</a><br><br>
-  © 2026 Ingenium Network · Todos los derechos reservados</p>
+  <p>
+    <strong style="color:var(--gold);font-family:'Playfair Display',serif;font-size:1rem">Ingenium Network EIRL</strong><br>
+    <a href="mailto:ingenium.nt@gmail.com">ingenium.nt@gmail.com</a> · <a href="https://linkedin.com/in/claudiafiorella" target="_blank">LinkedIn: claudiafiorella</a><br><br>
+    © 2026 Ingenium Network · Todos los derechos reservados
+  </p>
 </footer>
+
 <script>document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();document.querySelector(a.getAttribute('href'))?.scrollIntoView({behavior:'smooth'});});});</script>
 </body>
 </html>
