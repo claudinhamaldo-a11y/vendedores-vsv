@@ -14,7 +14,6 @@ body{font-family:"DM Sans",sans-serif;background:#fff;color:var(--tx);line-heigh
 .rev{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
 .rev.vis{opacity:1;transform:none}
 .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
-/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 5%;display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--bd);transition:box-shadow .3s}
 nav.sc{box-shadow:0 2px 20px rgba(26,92,191,.08)}
 .nl{display:flex;align-items:center;gap:10px;text-decoration:none}
@@ -25,7 +24,6 @@ nav.sc{box-shadow:0 2px 20px rgba(26,92,191,.08)}
 .nm a:hover,.nm a.act{color:var(--az)}
 .nc{background:var(--az);color:white!important;padding:9px 20px;border-radius:6px;font-weight:600!important;letter-spacing:.02em!important;text-transform:none!important;font-size:.85rem!important;transition:background .2s}
 .nc:hover{background:var(--azo)!important}
-/* HERO */
 .hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:110px 5% 80px;gap:72px;position:relative;overflow:hidden}
 .hbg{position:absolute;inset:0;pointer-events:none}
 .hgr{position:absolute;inset:0;background-image:linear-gradient(var(--bd) 1px,transparent 1px),linear-gradient(90deg,var(--bd) 1px,transparent 1px);background-size:56px 56px}
@@ -63,19 +61,16 @@ nav.sc{box-shadow:0 2px 20px rgba(26,92,191,.08)}
 .hvmc{background:var(--cr);border-radius:10px;padding:14px;border:1px solid var(--bd)}
 .hvmc strong{font-family:"DM Serif Display",serif;font-size:1.5rem;color:var(--az);display:block;line-height:1}
 .hvmc small{font-size:.68rem;color:var(--ts);font-weight:500;margin-top:3px;display:block}
-/* TRUST */
 .trust{padding:28px 5%;background:var(--cr);border-top:1px solid var(--bd);border-bottom:1px solid var(--bd)}
 .ti{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap}
 .ti span{display:flex;align-items:center;gap:8px;font-size:.78rem;font-weight:600;color:var(--ts);letter-spacing:.04em;text-transform:uppercase}
 .ti span::before{content:"✓";color:var(--az);font-weight:800;font-size:.85rem}
-/* SECTIONS */
 section{padding:96px 5%}
 .sl{font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--azm);margin-bottom:16px;display:flex;align-items:center;gap:10px}
 .sl::before{content:"";width:24px;height:2px;background:var(--azm);border-radius:2px;display:block}
 h2{font-family:"DM Serif Display",serif;font-size:clamp(2rem,3.5vw,2.8rem);line-height:1.1;letter-spacing:-.02em;color:var(--tx);margin-bottom:16px}
 h2 em{font-style:italic;color:var(--az)}
 .si{max-width:1100px;margin:0 auto}
-/* MENTORIA */
 .ment{background:var(--tx);position:relative;overflow:hidden}
 .mbg{position:absolute;inset:0;background-image:radial-gradient(rgba(74,144,217,.07) 1px,transparent 1px);background-size:32px 32px}
 .ment .sl{color:var(--azm)}.ment .sl::before{background:var(--azm)}
@@ -91,7 +86,6 @@ h2 em{font-style:italic;color:var(--az)}
 .pt{display:inline-block;margin-top:16px;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--azm);border:1px solid rgba(74,144,217,.3);padding:3px 10px;border-radius:20px}
 .mc{margin-top:48px;text-align:center}
 .mc p{color:rgba(255,255,255,.4);font-size:.9rem;margin-bottom:20px;font-style:italic}
-/* PRODUCTOS */
 .prod{background:#fff}
 .pi2{font-size:1rem;color:var(--ts);max-width:540px;line-height:1.75;margin-bottom:56px;font-weight:300}
 .prg{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
@@ -116,7 +110,6 @@ h2 em{font-style:italic;color:var(--az)}
 .bpr:hover{background:var(--azo);transform:translateY(-1px)}
 .bpr.ol{background:transparent;color:var(--az);border:1.5px solid var(--az)}
 .bpr.ol:hover{background:var(--az);color:white}
-/* B2B */
 .b2b{background:var(--cr)}
 .b2bg{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
 .b2bt p.desc{font-size:.95rem;color:var(--ts);line-height:1.75;margin-bottom:16px;font-weight:300}
@@ -133,7 +126,6 @@ h2 em{font-style:italic;color:var(--az)}
 .b2bi h4{font-size:.88rem;font-weight:600;color:var(--tx);margin-bottom:2px}
 .b2bi p{font-size:.75rem;color:var(--ts)}
 .b2bib{margin-left:auto;font-size:.65rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--azc);color:var(--az);padding:3px 10px;border-radius:20px;flex-shrink:0}
-/* AUTORA */
 .aut{background:#fff}
 .aig{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;max-width:1100px;margin:0 auto}
 .aff{background:var(--azc);border-radius:16px;min-height:380px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;border:1px solid var(--bd)}
@@ -154,7 +146,6 @@ h2 em{font-style:italic;color:var(--az)}
 .aco{display:flex;flex-direction:column;gap:8px;margin-top:24px}
 .aco a{display:inline-flex;align-items:center;gap:8px;font-size:.85rem;color:var(--ts);text-decoration:none;transition:color .2s}
 .aco a:hover{color:var(--az)}
-/* CTA FINAL */
 .ctaf{background:var(--az);position:relative;overflow:hidden;text-align:center;padding:96px 5%}
 .ctabg{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.06) 1px,transparent 1px);background-size:28px 28px}
 .ctagl{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:60%;height:80%;background:radial-gradient(ellipse,rgba(255,255,255,.08) 0%,transparent 65%)}
@@ -168,7 +159,6 @@ h2 em{font-style:italic;color:var(--az)}
 .bw:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2)}
 .bwo{border:1.5px solid rgba(255,255,255,.4);color:white;padding:16px 36px;border-radius:6px;text-decoration:none;font-weight:500;font-size:.95rem;transition:all .2s}
 .bwo:hover{border-color:white;background:rgba(255,255,255,.1)}
-/* FOOTER */
 footer{background:var(--tx);padding:48px 5% 32px}
 .fi{max-width:1100px;margin:0 auto}
 .ft2{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:40px}
@@ -182,7 +172,6 @@ footer{background:var(--tx);padding:48px 5% 32px}
 .fcp{font-size:.74rem;color:rgba(255,255,255,.2)}
 .flg{display:flex;gap:20px}.flg a{font-size:.72rem;color:rgba(255,255,255,.2);text-decoration:none;transition:color .2s}
 .flg a:hover{color:rgba(255,255,255,.5)}
-/* MOBILE */
 @media(max-width:900px){
   .hero{grid-template-columns:1fr;gap:40px;padding:100px 5% 60px}
   .hv{display:none}
@@ -194,10 +183,9 @@ footer{background:var(--tx);padding:48px 5% 32px}
 }
 @media(max-width:600px){.pg{grid-template-columns:1fr}.ft2{grid-template-columns:1fr}.hst{gap:24px}}
 .prh{padding:16px 20px 12px}.prb{padding:12px 20px}.prf{padding:0 20px 14px}.prn{font-size:1.05rem}.prd{font-size:.82rem;margin-bottom:10px}.prl li{font-size:.8rem;padding:3px 0 3px 14px}.prl{margin-bottom:10px}.prg{gap:16px}
-  </style>
+</style>
 </head>
 <body>
-
 <nav id="nv">
   <a href="#" class="nl">
     <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
@@ -252,7 +240,7 @@ footer{background:var(--tx);padding:48px 5% 32px}
       </div>
     </div>
     <div class="hvm">
-      <div class="hvmc"><strong>23</strong><small>Capítulos · Vender No es Suerte</small></div>
+      <div class="hvmc"><strong>100+</strong><small>Vendedores · Capacitados</small></div>
       <div class="hvmc"><strong>4×4</strong><small>Pilares · Mentoría Ejecutiva</small></div>
     </div>
   </div>
@@ -293,30 +281,47 @@ footer{background:var(--tx);padding:48px 5% 32px}
     <h2 class="rev d1">Herramientas para vender<br>y <em>crecer con método</em></h2>
     <p class="pi2 rev d2">Libros, guías y sistemas de capacitación diseñados desde la práctica real. Cada producto es independiente y aplicable desde el primer día.</p>
     <div class="prg">
+
+      <!-- VENDER NO ES SUERTE -->
       <div class="prc ft rev d1">
         <div class="prh"><div class="pri">📖</div><div class="prt">Libro · Amazon Kindle &amp; PDF</div><div class="prn">Vender No es Suerte</div><div class="prs">El método completo para cerrar más ventas</div></div>
         <div class="prb"><p class="prd">23 capítulos. 4 partes. Un método construido desde la práctica real con vendedores y equipos en Latinoamérica.</p><ul class="prl"><li>Mentalidad, prospección, cierre y seguimiento</li><li>Ventas digitales y por WhatsApp</li><li>Liderazgo de equipos comerciales</li><li>Ejercicio práctico por capítulo</li></ul></div>
         <div class="prf">
           <div class="prp"></div>
           <div style="display:flex;flex-direction:column;gap:6px">
-            <a href="https://www.amazon.com/dp/B0GSSXHKVY" target="_blank" class="bpr">Amazon →</a>
-            <a href="https://go.hotmart.com/Y104911596L" target="_blank" class="bpr ol">Hotmart →</a>
+            <a href="https://claudinhamaldo-a11y.github.io/vendedores-vsv/vender-no-es-suerte-amazon.html" target="_blank" class="bpr">Amazon →</a>
+            <a href="https://claudinhamaldo-a11y.github.io/vendedores-vsv/vender-no-es-suerte.html" target="_blank" class="bpr ol">Hotmart →</a>
           </div>
         </div>
       </div>
+
+      <!-- VENDEDORES QUE SABEN VENDEN -->
       <div class="prc rev d2">
         <div class="prh"><div class="pri">📦</div><div class="prt">Pack Completo · 4 Guías</div><div class="prn">Vendedores que Saben, Venden</div><div class="prs">Sistema completo de ventas profesionales</div></div>
         <div class="prb"><p class="prd">Del vendedor nuevo al profesional de alto rendimiento. Tres niveles progresivos más la guía del capacitador interno.</p><ul class="prl"><li>Guía Básica — Fundamentos de ventas</li><li>Guía Intermedia — Ventas digitales y negociación</li><li>Guía Avanzada — Estrategia, KPIs y liderazgo</li><li>Guía del Capacitador Interno (B2B)</li></ul></div>
         <div class="prf">
           <div class="prp"></div>
-          <a href="https://go.hotmart.com/F104794550X" target="_blank" class="bpr">Ver pack →</a>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <a href="https://claudinhamaldo-a11y.github.io/vendedores-vsv/" target="_blank" class="bpr">Hotmart →</a>
+            <a href="https://claudinhamaldo-a11y.github.io/vendedores-vsv/paraguay.html" target="_blank" class="bpr ol">Paraguay →</a>
+          </div>
         </div>
       </div>
+
+      <!-- EL PROFESIONAL DE LAS COMISIONES -->
       <div class="prc d3">
-        <div class="prh"><div class="pri">&#x1F4BC;</div><div class="prt">Libro &middot; Amazon Kindle &amp; PDF</div><div class="prn">El Profesional de las Comisiones</div><div class="prs">El m&eacute;todo para el que vende por comisi&oacute;n y contrata representantes</div></div>
-        <div class="prb"><p class="prd">Evalu&aacute;, negoci&aacute; y constru&iacute; tu carrera como vendedor independiente. Herramientas para el comisionista y la empresa que lo contrata.</p><ul class="prl"><li>Evaluar y negociar ofertas de comisi&oacute;n</li><li>Construir cartera propia como independiente</li><li>Matriz de Compatibilidad: 3 dimensiones</li><li>Para empresas: red de representantes efectiva</li></ul></div>
-        <div class="prf"><div class="prp"></div><a href="https://www.amazon.com/dp/B0GTJ67FGC" target="_blank" rel="noopener" class="bpr">Amazon &rarr;</a></div>
+        <div class="prh"><div class="pri">💼</div><div class="prt">Libro · Amazon Kindle &amp; PDF</div><div class="prn">El Profesional de las Comisiones</div><div class="prs">El método para el que vende por comisión y contrata representantes</div></div>
+        <div class="prb"><p class="prd">Evaluá, negociá y construí tu carrera como vendedor independiente. Herramientas para el comisionista y la empresa que lo contrata.</p><ul class="prl"><li>Evaluar y negociar ofertas de comisión</li><li>Construir cartera propia como independiente</li><li>Matriz de Compatibilidad: 3 dimensiones</li><li>Para empresas: red de representantes efectiva</li></ul></div>
+        <div class="prf">
+          <div class="prp"></div>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <a href="https://claudinhamaldo-a11y.github.io/vendedores-vsv/epc-amazon.html" target="_blank" class="bpr">Amazon →</a>
+            <a href="https://claudinhamaldo-a11y.github.io/vendedores-vsv/epc-hotmart.html" target="_blank" class="bpr ol">Hotmart →</a>
+          </div>
+        </div>
       </div>
+
+      <!-- TALLERES -->
       <div class="prc rev d3">
         <div class="prh"><div class="pri">🎓</div><div class="prt">Talleres Presenciales</div><div class="prn">Capacitación In-Company</div><div class="prs">Para equipos de ventas y líderes comerciales</div></div>
         <div class="prb"><p class="prd">Talleres para ejecutar, no solo escuchar. Cada sesión incluye ejercicios, roleplay y plan de acción inmediato.</p><ul class="prl"><li>Vendé Sin Vergüenza — Ventas para MiPyMEs</li><li>Liderazgo Comercial de Equipos</li><li>Técnicas de Cierre y Manejo de Objeciones</li><li>Media jornada o jornada completa</li></ul></div>
@@ -325,6 +330,7 @@ footer{background:var(--tx);padding:48px 5% 32px}
           <a href="https://wa.me/595987462206?text=Me%20interesa%20un%20taller%20para%20mi%20equipo" target="_blank" class="bpr">Consultar →</a>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -348,7 +354,7 @@ footer{background:var(--tx);padding:48px 5% 32px}
         <div class="b2bi"><div class="b2bii">📘</div><div><h4>Guías digitales por vendedor</h4><p>Básica + Intermedia + Avanzada</p></div><div class="b2bib">Por persona</div></div>
         <div class="b2bi"><div class="b2bii">🎓</div><div><h4>Guía del Capacitador Interno</h4><p>Manual completo para facilitar sesiones</p></div><div class="b2bib">Incluido</div></div>
         <div class="b2bi"><div class="b2bii">📊</div><div><h4>Plantilla Excel de KPIs</h4><p>Seguimiento y métricas de ventas</p></div><div class="b2bib">Incluido</div></div>
-        <div class="b2bi"><div class="b2bii">🍩‍🏫</div><div><h4>Capacitación al responsable</h4><p>Media o jornada completa con Claudia</p></div><div class="b2bib">Opcional</div></div>
+        <div class="b2bi"><div class="b2bii">🧑‍🏫</div><div><h4>Capacitación al responsable</h4><p>Media o jornada completa con Claudia</p></div><div class="b2bib">Opcional</div></div>
         <div style="margin-top:18px;padding-top:14px;border-top:1px solid var(--bd);font-size:.76rem;color:var(--ts);text-align:center">Mínimo 2 personas · Sin exclusividad</div>
       </div>
     </div>
@@ -397,12 +403,36 @@ footer{background:var(--tx);padding:48px 5% 32px}
 <footer>
   <div class="fi">
     <div class="ft2">
-      <div><div class="fb">Ingenium Network<small>EIRL · Asunción, Paraguay</small></div><p class="fd">Mentoría ejecutiva 1-a-1, formación comercial y herramientas de desarrollo profesional para MiPyMEs y vendedores en Paraguay y Latinoamérica.</p></div>
-      <div class="fc"><h4>Mentoría</h4><a href="#mentoria">Mentoría 4×4</a><a href="#empresas">Programa B2B</a><a href="#autora">Sobre Claudia</a><a href="https://wa.me/595987462206" target="_blank">Contacto</a></div>
-      <div class="fc"><h4>Productos</h4><a href="https://www.amazon.com/dp/B0GSSXHKVY" target="_blank">Vender No es Suerte</a><a href="vender-no-es-suerte.html">Libro PDF + Ejercicios</a><a href="https://go.hotmart.com/F104794550X" target="_blank">Pack VSV Completo</a><a href="#productos">Talleres</a></div>
-      <div class="fc"><h4>Contacto</h4><a href="mailto:ingenium.nt@gmail.com">ingenium.nt@gmail.com</a><a href="tel:+595987462206">+595 987 462 206</a><a href="https://www.linkedin.com/in/claudiafiorella/" target="_blank">LinkedIn: claudiafiorella</a><a href="#">Asunción, Paraguay</a></div>
+      <div>
+        <div class="fb">Ingenium Network<small>EIRL · Asunción, Paraguay</small></div>
+        <p class="fd">Mentoría ejecutiva 1-a-1, formación comercial y herramientas de desarrollo profesional para MiPyMEs y vendedores en Paraguay y Latinoamérica.</p>
+      </div>
+      <div class="fc">
+        <h4>Mentoría</h4>
+        <a href="#mentoria">Mentoría 4×4</a>
+        <a href="#empresas">Programa B2B</a>
+        <a href="#autora">Sobre Claudia</a>
+        <a href="https://wa.me/595987462206" target="_blank">Contacto</a>
+      </div>
+      <div class="fc">
+        <h4>Productos</h4>
+        <a href="https://claudinhamaldo-a11y.github.io/vendedores-vsv/vender-no-es-suerte.html">Vender No es Suerte</a>
+        <a href="https://claudinhamaldo-a11y.github.io/vendedores-vsv/epc-hotmart.html">El Profesional de las Comisiones</a>
+        <a href="https://claudinhamaldo-a11y.github.io/vendedores-vsv/">Método Vendedores que Saben, Venden</a>
+        <a href="#productos">Talleres</a>
+      </div>
+      <div class="fc">
+        <h4>Contacto</h4>
+        <a href="mailto:ingenium.nt@gmail.com">ingenium.nt@gmail.com</a>
+        <a href="tel:+595987462206">+595 987 462 206</a>
+        <a href="https://www.linkedin.com/in/claudiafiorella/" target="_blank">LinkedIn: claudiafiorella</a>
+        <a href="#">Asunción, Paraguay</a>
+      </div>
     </div>
-    <div class="fbot"><div class="fcp">© 2026 Ingenium Network EIRL · Todos los derechos reservados</div><div class="flg"><a href="#">Privacidad</a><a href="#">Términos</a></div></div>
+    <div class="fbot">
+      <div class="fcp">© 2026 Ingenium Network EIRL · Todos los derechos reservados</div>
+      <div class="flg"><a href="#">Privacidad</a><a href="#">Términos</a></div>
+    </div>
   </div>
 </footer>
 
